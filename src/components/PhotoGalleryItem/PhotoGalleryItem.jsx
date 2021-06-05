@@ -1,12 +1,16 @@
+import './PhotoGalleryItem.css';
 import {useState} from 'react';
 import axios from 'axios';
 
-function PhotoGalleryItem () {
+function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
 
     return (
-        <div>
-
-        </div>
+        <>
+            {/* // ⬇ Loops through and renders each photo */}
+            <div className="flex">
+                <img src={galleryItems.path} width="200px" height="200px" />
+            </div>
+        </>
     )
 }
 
