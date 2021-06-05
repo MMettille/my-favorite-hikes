@@ -7,7 +7,7 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
     return (
         <>
             {/* // ⬇ Loops through and renders each photo */}
-            <div className="flex">
+            <div className="photo">
                 <img src={galleryItems.path} width="200px" height="200px" />
             </div>
         </>
