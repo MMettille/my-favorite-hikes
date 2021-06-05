@@ -38,8 +38,8 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
                 </div>
             )} */}
 
-            // ⬇ The image shows first, but then you cannot toggle it back.
-            { isHidden ? (
+            {/* // ⬇ The image shows first, but then you cannot toggle it back. */}
+            {/* { isHidden ? (
                 <div>
                 <p>{galleryItems.description}</p>
             </div>
@@ -47,7 +47,28 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
                 <div className="photo">
                     <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
                 </div>
-            )}
+            )} */}
+
+            {/* // ⬇ This works! It looks horrible though!
+            { isHidden ? (
+                <div>
+                <p onClick={() => setIsHidden(!isHidden)}>{galleryItems.description}</p>
+            </div>
+            ) : (
+                <div className="photo">
+                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
+                </div>
+            )} */}
+
+            { isHidden ? (
+                <div>
+                <p onClick={() => setIsHidden(!isHidden)}>{galleryItems.description}</p>
+            </div>
+            ) : (
+                <div className="photo">
+                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
+                </div>
+            )} */}
             
             {/* <button onClick={() => setIsHidden(!isHidden)}>
                     {!isHidden ? 'Hide' : 'Show'}
