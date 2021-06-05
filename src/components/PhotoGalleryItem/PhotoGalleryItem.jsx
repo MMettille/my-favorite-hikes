@@ -61,14 +61,14 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
             )} */}
 
             { isHidden ? (
-                <div>
-                <p onClick={() => setIsHidden(!isHidden)}>{galleryItems.description}</p>
+                <div onClick={() => setIsHidden(!isHidden)}>
+                <p>{galleryItems.description}</p>
             </div>
             ) : (
-                <div className="photo">
-                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
+                <div className="photo" onClick={() => setIsHidden(!isHidden)}>
+                    <img src={galleryItems.path} width="200px" height="200px"/>
                 </div>
-            )} */}
+            )}
             
             {/* <button onClick={() => setIsHidden(!isHidden)}>
                     {!isHidden ? 'Hide' : 'Show'}
