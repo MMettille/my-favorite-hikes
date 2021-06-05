@@ -31,7 +31,7 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <PhotoGallery list={photoGallery} getPhotoGallery={getPhotoGallery}/>
+        <PhotoGallery list={photoGallery}/>
         <img src="images/Image-Five.jpeg" width="200px" height="200px"/>
       </div>
     );
