@@ -1,6 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import {useState, useEffect} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import Header from '../Header/Header.jsx';
 import './App.css';
 
 function App() {
@@ -14,13 +15,13 @@ function App() {
 
     const getPhotos = () => {
       console.log('in getPhotos')
+    
     }
 
+    // ⬇ Rendering what we see on the DOM
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
+        <Header />
         <p>Gallery goes here</p>
         <img src="images/Image-Five.jpeg" width="200px" height="200px"/>
       </div>
