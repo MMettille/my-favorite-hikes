@@ -10,18 +10,48 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
         setIsHidden(!isHidden);
         console.log(isHidden);
     }
+    console.log(isHidden)
     return (
         <>
-            { isHidden ? (
-                
+            {/* // ⬇ This will show the photo always, and the description to the left of it. */}
+            {/* { isHidden ? (
+                <> </>
+            ) : (
+                <div>
+                    <p>{galleryItems.description}</p>
+                </div>
             )}
-            {/* // ⬇ Loops through and renders each photo */}
+            // ⬇ Loops through and renders each photo
             <div className="photo">
                 <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
-                {/* <button onClick={() => setIsHidden(!isHidden)}>
+                
+            </div> */}
+
+            {/* // ⬇ Only the description shows up
+            { isHidden ? (
+                <div className="photo">
+                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
+                </div>
+            ) : (
+                <div>
+                    <p>{galleryItems.description}</p>
+                </div>
+            )} */}
+
+            // ⬇ The image shows first, but then you cannot toggle it back.
+            { isHidden ? (
+                <div>
+                <p>{galleryItems.description}</p>
+            </div>
+            ) : (
+                <div className="photo">
+                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
+                </div>
+            )}
+            
+            {/* <button onClick={() => setIsHidden(!isHidden)}>
                     {!isHidden ? 'Hide' : 'Show'}
                 </button> */}
-            </div>
         </>
     )
 }
