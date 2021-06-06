@@ -1,3 +1,21 @@
-.photo {
+.top-box{
     margin: 30px;
+}
+
+.photo-description-box{
+    max-width: 200px;
+    max-height: 200px;
+    width: 196px;
+    height: 196px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 196px;
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    padding: 5px;
 }

@@ -12,68 +12,17 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
     }
     console.log(isHidden)
     return (
-        <>
-            {/* // ⬇ This will show the photo always, and the description to the left of it. */}
-            {/* { isHidden ? (
-                <> </>
-            ) : (
-                <div>
-                    <p>{galleryItems.description}</p>
-                </div>
-            )}
-            // ⬇ Loops through and renders each photo
-            <div className="photo">
-                <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
-                
-            </div> */}
-
-            {/* // ⬇ Only the description shows up
-            { isHidden ? (
-                <div className="photo">
-                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
-                </div>
-            ) : (
-                <div>
-                    <p>{galleryItems.description}</p>
-                </div>
-            )} */}
-
-            {/* // ⬇ The image shows first, but then you cannot toggle it back. */}
-            {/* { isHidden ? (
-                <div>
-                <p>{galleryItems.description}</p>
-            </div>
-            ) : (
-                <div className="photo">
-                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
-                </div>
-            )} */}
-
-            {/* // ⬇ This works! It looks horrible though!
-            { isHidden ? (
-                <div>
-                <p onClick={() => setIsHidden(!isHidden)}>{galleryItems.description}</p>
-            </div>
-            ) : (
-                <div className="photo">
-                    <img src={galleryItems.path} width="200px" height="200px"  onClick={() => setIsHidden(!isHidden)} />
-                </div>
-            )} */}
-
-            { isHidden ? (
-                <div onClick={() => setIsHidden(!isHidden)}>
-                <p>{galleryItems.description}</p>
+        <div className="top-box">
+                { isHidden ? (
+                <div onClick={() => setIsHidden(!isHidden)} className="photo-description-box">
+                <span>{galleryItems.description}</span>
             </div>
             ) : (
                 <div className="photo" onClick={() => setIsHidden(!isHidden)}>
                     <img src={galleryItems.path} width="200px" height="200px"/>
                 </div>
             )}
-            
-            {/* <button onClick={() => setIsHidden(!isHidden)}>
-                    {!isHidden ? 'Hide' : 'Show'}
-                </button> */}
-        </>
+        </div>
     )
 }
 
