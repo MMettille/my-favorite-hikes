@@ -26,14 +26,14 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
     }
 
     return (
-        <div className="top-box">
+        <div className="photo-description-container">
                 { isHidden ? (
-                <div onClick={() => setIsHidden(!isHidden)} className="photo-description-box">
+                <div onClick={() => setIsHidden(!isHidden)} className="image-description-box">
                 <span>{galleryItems.description}</span>
             </div>
             ) : (
-                <div className="photo" onClick={() => setIsHidden(!isHidden)}>
-                    <img src={galleryItems.path} width="200px" height="200px"/>
+                <div className="image" onClick={() => setIsHidden(!isHidden)}>
+                    <img src={galleryItems.path} />
                 </div>
             )}
 

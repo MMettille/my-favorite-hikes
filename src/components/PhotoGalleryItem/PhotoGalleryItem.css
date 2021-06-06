@@ -1,16 +1,22 @@
-.top-box{
-    margin: 30px;
+img {
+    height: 200px;
+    width: 200px;
 }
 
-.photo-description-box{
-    max-width: 200px;
-    max-height: 200px;
-    width: 196px;
-    height: 196px;
+.photo-description-container{
+    margin: 30px;
+    padding: 20px;
     border: 2px solid black;
     border-radius: 5px;
-    text-align: center;
+    display: inline-block;
+}
+
+.image-description-box,
+.image {
+    max-width: 196px;
+    max-height: 196px;
     line-height: 196px;
+    text-align: center;
 }
 
 span {
@@ -21,6 +27,6 @@ span {
 }
 
 button {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 5px;
 }

@@ -6,7 +6,7 @@ function PhotoGallery ({list, getPhotoGallery}) {
     return(
         <div>
             <h3>My Favorite Hikes:</h3>
-                <div className="flex photo-gallery">
+                <div className="photo-gallery">
                     {list.map(galleryItems => 
                         // ⬇ Each photo gets send into the PhotoGalleryItem
                         <PhotoGalleryItem getPhotoGallery={getPhotoGallery} key={galleryItems.id} id={galleryItems.id} path={galleryItems.path} description={galleryItems.description} galleryItems={galleryItems} />

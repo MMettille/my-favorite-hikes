@@ -1,11 +1,4 @@
-
-
-.flex {
-    display: flex;
-}
-
 .photo-gallery, h3 {
     margin: 20px;
-    padding: 10px;
     text-align: center;
 }
