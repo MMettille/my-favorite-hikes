@@ -11,6 +11,20 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
         console.log(isHidden);
     }
     
+    const getMoreLikes = () => {
+        console.log('liked!')
+        const data = {
+            likes: 1
+        }
+        axios.put(`gallery/like/${galleryItems.id}`, data)
+        .then( response => {
+            console.log(response);
+            getPhotoGallery();
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
     return (
         <div className="top-box">
                 { isHidden ? (
@@ -23,7 +37,7 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
                 </div>
             )}
 
-            <button>Love!</button>
+            <button onClick={() => getMoreLikes()}>Love!</button>
             <p>{galleryItems.likes} people love this!</p>
         </div>
     )
