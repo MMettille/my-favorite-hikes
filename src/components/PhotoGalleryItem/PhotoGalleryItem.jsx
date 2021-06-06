@@ -10,7 +10,7 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
         setIsHidden(!isHidden);
         console.log(isHidden);
     }
-    console.log(isHidden)
+    
     return (
         <div className="top-box">
                 { isHidden ? (
@@ -22,6 +22,9 @@ function PhotoGalleryItem ({galleryItems, getPhotoGallery}) {
                     <img src={galleryItems.path} width="200px" height="200px"/>
                 </div>
             )}
+
+            <button>Love!</button>
+            <p>{galleryItems.likes} people love this!</p>
         </div>
     )
 }
